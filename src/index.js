@@ -1,7 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App'
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
+import { Provider } from "react-redux";
+import "bulma/css/bulma.min.css";
+import store from "./store";
 
-  import 'bulma/css/bulma.min.css';
-
-  ReactDOM.render(<Router> <App/> </Router>, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
